@@ -11,6 +11,10 @@
 		5A6AA378277605BA003C8AA4 /* HeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6AA376277605BA003C8AA4 /* HeaderViewCell.xib */; };
 		5A6AA37F27766AAD003C8AA4 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6AA37D27766AAD003C8AA4 /* ChartViewController.m */; };
 		5A6AA38027766AAD003C8AA4 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6AA37E27766AAD003C8AA4 /* ChartViewController.xib */; };
+		5A6BCC0E277679C000E93DFA /* ChartViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC0D277679C000E93DFA /* ChartViewModel.m */; };
+		5A6BCC1327767D4E00E93DFA /* CandleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC1227767D4E00E93DFA /* CandleViewModel.m */; };
+		5A6BCC1627767E5400E93DFA /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC1527767E5400E93DFA /* PositionModel.m */; };
+		5A6BCC1D2776A21500E93DFA /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC1B2776A21500E93DFA /* ChartView.m */; };
 		626E26721EC7BB1E00EFE65C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 626E26711EC7BB1E00EFE65C /* main.m */; };
 		626E26751EC7BB1E00EFE65C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 626E26741EC7BB1E00EFE65C /* AppDelegate.m */; };
 		626E26781EC7BB1E00EFE65C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626E26771EC7BB1E00EFE65C /* ViewController.m */; };
@@ -28,6 +32,14 @@
 		5A6AA37C27766AAD003C8AA4 /* ChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
 		5A6AA37D27766AAD003C8AA4 /* ChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
 		5A6AA37E27766AAD003C8AA4 /* ChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
+		5A6BCC0D277679C000E93DFA /* ChartViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewModel.m; sourceTree = "<group>"; };
+		5A6BCC0F27767A7100E93DFA /* ChartViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewModel.h; sourceTree = "<group>"; };
+		5A6BCC1127767D4E00E93DFA /* CandleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandleViewModel.h; sourceTree = "<group>"; };
+		5A6BCC1227767D4E00E93DFA /* CandleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandleViewModel.m; sourceTree = "<group>"; };
+		5A6BCC1427767E5400E93DFA /* PositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionModel.h; sourceTree = "<group>"; };
+		5A6BCC1527767E5400E93DFA /* PositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
+		5A6BCC1B2776A21500E93DFA /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
+		5A6BCC1C2776A21500E93DFA /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
 		626E266D1EC7BB1E00EFE65C /* UITable_CustomeCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITable_CustomeCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626E26711EC7BB1E00EFE65C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		626E26731EC7BB1E00EFE65C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,11 +106,67 @@
 		5A6AA37B27766A69003C8AA4 /* ChartViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5A6BCC1A2776A16B00E93DFA /* View */,
+				5A6BCC1027767D4400E93DFA /* Model */,
+				5A6BCC0C2776799E00E93DFA /* ViewModel */,
 				5A6AA37C27766AAD003C8AA4 /* ChartViewController.h */,
 				5A6AA37D27766AAD003C8AA4 /* ChartViewController.m */,
 				5A6AA37E27766AAD003C8AA4 /* ChartViewController.xib */,
 			);
 			name = ChartViewController;
+			sourceTree = "<group>";
+		};
+		5A6BCC0C2776799E00E93DFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BCC1827769F8600E93DFA /* CandleViewModel */,
+				5A6BCC1727769F7500E93DFA /* ChartViewModel */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		5A6BCC1027767D4400E93DFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BCC1927769F9E00E93DFA /* PositionModel */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5A6BCC1727769F7500E93DFA /* ChartViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BCC0F27767A7100E93DFA /* ChartViewModel.h */,
+				5A6BCC0D277679C000E93DFA /* ChartViewModel.m */,
+			);
+			name = ChartViewModel;
+			sourceTree = "<group>";
+		};
+		5A6BCC1827769F8600E93DFA /* CandleViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BCC1127767D4E00E93DFA /* CandleViewModel.h */,
+				5A6BCC1227767D4E00E93DFA /* CandleViewModel.m */,
+			);
+			name = CandleViewModel;
+			sourceTree = "<group>";
+		};
+		5A6BCC1927769F9E00E93DFA /* PositionModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BCC1427767E5400E93DFA /* PositionModel.h */,
+				5A6BCC1527767E5400E93DFA /* PositionModel.m */,
+			);
+			name = PositionModel;
+			sourceTree = "<group>";
+		};
+		5A6BCC1A2776A16B00E93DFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BCC1C2776A21500E93DFA /* ChartView.h */,
+				5A6BCC1B2776A21500E93DFA /* ChartView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		626E26641EC7BB1E00EFE65C = {
@@ -227,12 +295,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6BCC1327767D4E00E93DFA /* CandleViewModel.m in Sources */,
 				5A6AA377277605BA003C8AA4 /* HeaderViewCell.m in Sources */,
 				5A6AA37F27766AAD003C8AA4 /* ChartViewController.m in Sources */,
 				626E26781EC7BB1E00EFE65C /* ViewController.m in Sources */,
 				626E26751EC7BB1E00EFE65C /* AppDelegate.m in Sources */,
 				626E26B71EC7C11F00EFE65C /* CustomCell.m in Sources */,
+				5A6BCC1627767E5400E93DFA /* PositionModel.m in Sources */,
 				626E26721EC7BB1E00EFE65C /* main.m in Sources */,
+				5A6BCC1D2776A21500E93DFA /* ChartView.m in Sources */,
+				5A6BCC0E277679C000E93DFA /* ChartViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

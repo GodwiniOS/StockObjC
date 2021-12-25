@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ChartViewController.h"
 
 @interface ViewController ()
 @end
@@ -34,8 +35,8 @@
     lowHighBid = [NSMutableArray array];
 
     for (NSInteger i = 0; i <= [currencyTitle count]; i++) {
-        NSInteger *ask = 11111 + arc4random() % (99999 - 11111);
-        NSInteger *bid = 11111 + arc4random() % (99999 - 11111);
+        NSInteger ask = 11111 + arc4random() % (99999 - 11111);
+        NSInteger bid = 11111 + arc4random() % (99999 - 11111);
         [askvalues addObject:[NSNumber numberWithInteger:ask]];
         [bidValues addObject:[NSNumber numberWithInteger:bid]];
         [lowHighAsk addObject:[NSNumber numberWithInt:0]];
@@ -68,7 +69,6 @@
 - (void)eventToFire:(NSTimer*)timer {
     
 
-    
     nextAskvalues = [NSMutableArray array];
     nextBidValues = [NSMutableArray array];
     lowHighBid = [NSMutableArray array];
@@ -76,11 +76,11 @@
 
     for (NSInteger i = 0; i <= [currencyTitle count]; i++) {
         
-        NSInteger *ask = 11111 + arc4random() % (99999 - 11111);
-        NSInteger *bid = 11111 + arc4random() % (99999 - 11111);
+        NSInteger ask = 11111 + arc4random() % (99999 - 11111);
+        NSInteger bid = 11111 + arc4random() % (99999 - 11111);
         
-        BOOL *randomORNotBid = (self.randomBool);
-        BOOL *randomORNotAsk = (self.randomBool);
+        BOOL randomORNotBid = (self.randomBool);
+        BOOL randomORNotAsk = (self.randomBool);
         
         if (randomORNotAsk) {
             [nextAskvalues addObject:[NSNumber numberWithInteger:[askvalues[i] integerValue]] ];
@@ -96,8 +96,8 @@
         
 
         
-        NSInteger *bidPrevious  = [bidValues[i] integerValue];
-        NSInteger *askPrevious  = [askvalues[i] integerValue];
+        NSInteger bidPrevious  = [bidValues[i] integerValue];
+        NSInteger askPrevious  = [askvalues[i] integerValue];
 
         if (randomORNotBid) {
             [lowHighBid insertObject:[NSNumber numberWithInt:0] atIndex:i];
@@ -132,6 +132,18 @@
     return [currencyTitle count] + 1;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ChartViewController *charVC =
+        [[ChartViewController alloc]
+            initWithNibName:@"ChartViewController" bundle:nil];
+    
+    __weak typeof(self) weakSelf = self;
+    charVC.title = [currencyTitle objectAtIndex:indexPath.row-1];
+    [weakSelf.navigationController pushViewController:charVC animated:YES];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0) {
@@ -159,7 +171,6 @@
     cell.Label_subject.text = [currencyTitle objectAtIndex:indexPath.row-1];
     
     if (indexPath.row-1 == 1) {
-//        cell.ImageView_thumbnail.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", [currencyIcon objectAtIndex:indexPath.row-1]]];
         cell.ImageView_thumbnail.image = [UIImage imageNamed:[NSString stringWithFormat:@"currencyC"]];
 
     } else {
