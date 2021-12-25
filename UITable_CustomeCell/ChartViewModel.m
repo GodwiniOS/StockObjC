@@ -17,6 +17,10 @@
     return self;
 }
 
+//- (instancetype)initWithHLOC{
+//    return self;
+//}
+
 - (void)initialValuesGenerator{
     
     CandleViewModel *first = [[CandleViewModel alloc]initWithHLOC:180 :150 :175 :155];

@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ChartViewModel.h"
+#import "ChartView.h"
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface ChartViewController : UIViewController
+
+@property (nonatomic, strong) ChartViewModel *viewModel;
+@property (weak, nonatomic) IBOutlet ChartView *chartView;
 
 @end
 

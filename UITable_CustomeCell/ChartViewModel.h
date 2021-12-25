@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PositionModel.h"
 #import "CandleViewModel.h"
+#import "TimeLineViewModel.h"
 
 @interface ChartViewModel : NSObject
 
@@ -18,7 +19,7 @@
 @property (nonatomic, strong) PositionModel *currentStockStart;
 @property (nonatomic, strong) PositionModel *currentStockEnd;
 
--(instancetype)initWithHLOC;
+//-(instancetype)initWithHLOC;
 - (void) initialValuesGenerator;
 - (void) generateNew;
 @end

@@ -10,4 +10,9 @@
 
 @implementation PositionModel
 
+- (instancetype)init:(float)xValue :(float)yValuee{
+    _x = xValue;
+    _y = yValuee;
+    return self;
+}
 @end

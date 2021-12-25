@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartViewController">
             <connections>
+                <outlet property="chartView" destination="jFd-jV-g7N" id="NUJ-Ec-qPF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,15 +19,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFd-jV-g7N">
-                    <rect key="frame" x="27" y="328" width="360" height="250"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFd-jV-g7N" customClass="ChartView">
+                    <rect key="frame" x="27" y="328" width="360" height="316"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="jFd-jV-g7N" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="8zD-i4-v3g"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="jFd-jV-g7N" secondAttribute="bottom" constant="218" id="Cge-TZ-Y3M"/>
                 <constraint firstItem="jFd-jV-g7N" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="284" id="ECg-JL-dXu"/>
                 <constraint firstItem="jFd-jV-g7N" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="WeB-ag-hab"/>
                 <constraint firstItem="jFd-jV-g7N" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="27" id="eZY-Qc-RIP"/>

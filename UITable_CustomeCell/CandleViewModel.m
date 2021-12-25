@@ -9,42 +9,44 @@
 #import "CandleViewModel.h"
 
 @implementation CandleViewModel
-
 //@synthesize data;
 
--(instancetype)initWithHLOC:(int *)highValue
-                           :(int *)lowValuee
-                           :(int *)openValue
-                           :(int *)closeValue{
+-(instancetype)initWithHLOC:(int)highValue
+                           :(int)lowValuee
+                           :(int)openValue
+                           :(int)closeValue{
     self = [super init];
     if(self)
     {
-        self.height = *(highValue);
-        self.low = *(lowValuee);
-        self.open = *(openValue);
-        self.close = *(closeValue);
+        self.height = (highValue);
+        self.low = (lowValuee);
+        self.open = (openValue);
+        self.close = (closeValue);
+        _width = 1;
+//        _space = 0.5;
+        _level = 0;
     }
     return self;
 }
 
 
--(instancetype)initWithHLOC:(int *)highValue
-                           :(int *)lowValuee
-                           :(int *)openValue
-                           :(int *)closeValue
-                           :(int *)heightValue
+-(instancetype)initWithHLOC:(int)highValue
+                           :(int)lowValuee
+                           :(int)openValue
+                           :(int)closeValue
+                           :(int)heightValue
                            :(PositionModel *)positionValue
-                           :(int *)levelValue{
+                           :(int)levelValue{
     self = [super init];
     if(self)
     {
-        self.height = *(highValue);
-        self.low = *(lowValuee);
-        self.open = *(openValue);
-        self.close = *(closeValue);
-        self.height = *(heightValue);
+        self.height = (highValue);
+        self.low = (lowValuee);
+        self.open = (openValue);
+        self.close = (closeValue);
+        self.height = (heightValue);
         self.position = positionValue;
-        self.level = *(levelValue);
+        self.level = (levelValue);
             
     }
     return self;
@@ -62,61 +64,58 @@
     
     bool validation = NO;
     
-    CandleViewModel *candleViewModel = [CandleViewModel alloc];
+//    CandleViewModel *candleViewModel = [[CandleViewModel alloc]init];
+    int newClose = 0;
+    int newHigh = 0;
+    int newLow = 0;
+    int newOpen = 0;
+    int newHeight = 0;
+    int newLevel = 0;//low
+    PositionModel *newPosition = [[PositionModel alloc]init];
+
     while (!validation) {
         
-        int random = 10 + arc4random() % (20 - 10);
+        int random = 10 + arc4random() % (60 - 10);
 
-        NSInteger newOpen = [self close];
-        NSInteger newLevel = 0;//low
-
+        newOpen = _close;
         if (self.randomBool){
             newLevel = 1; // high
         }
-//            let newClose = newLevel == .High ? newOpen + Int(random) : newOpen - Int(random)
         
-        long keyDec = ((long)(random))/5;
+        float keyDec = ((float)(random))/5;
         int keyInt = (int)keyDec;
 
 
-
-        NSInteger newClose = newOpen - (NSInteger)keyInt;
-        NSInteger newHigh = newOpen + 5;
-        NSInteger newLow = newOpen - 5;
-        NSInteger newHeight = _high - _low;
         if (newLevel == 1) {
-            newClose = newOpen + (NSInteger)keyInt;
+            newClose = newOpen + (int)keyInt;
             newHigh = newClose + 5;
             newLow = newClose - 5;
+        } else {
+            newClose = newOpen - (int)keyInt;
+            newHigh = newOpen + 5;
+            newLow = newOpen - 5;
         }
         
-//        let newClose = newLevel == .High ? newOpen + Int(random/5) : newOpen - Int(random/5)
+        newHeight = _high - _low;
 
-//        let newHigh = newLevel == .High ? newClose + 5 : newOpen + 5
-//        let newLow = newLevel == .High ? newClose - 5 : newOpen - 5
-//        let newHeight = high - low
-        
-        PositionModel *newPosition = [PositionModel alloc];
-        newPosition.x = (float)indexValue * 1.5;
+        newPosition.x = (float)indexValue * 2; // 1.5
         newPosition.y = 210 - (float)newHigh;
-//        let newPosition = Position(x: Float(index) * 1.5, y: Float(210 - newHigh))
         
-        
+        NSLog(@"%.2f", newPosition.y);
+        NSLog(@"%.2f", _close);
+
         validation = NO;
-        if (newPosition.y > 15) {
+        if (newPosition.y > 5) { // new rule 15
             if (newPosition.y < 190) {
                 validation = YES;
             }
         }
         
-//        validation = newPosition.y > 15 && newPosition.y < 190
-        
-        
-        CandleViewModel *candleVM = [[CandleViewModel alloc]initWithHLOC:&newHigh :&newLow :&newOpen :&newClose :&newHeight :newPosition :&newLevel];
-        candleViewModel = candleVM;
+
     }
     
-    return candleViewModel;
+    CandleViewModel *candleVM = [[CandleViewModel alloc]initWithHLOC:newHigh :newLow :newOpen :newClose :newHeight :newPosition :newLevel];
+    return candleVM;
 }
 
 

@@ -11,27 +11,31 @@
 
 @implementation ChartView : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    return self;
+}
 
 - (void)prepare{
     
     
-    CALayer *line1 = [CALayer alloc];
+    CALayer *line1 = [[CALayer alloc]init];
 
     line1.frame = CGRectMake(0, 0, 300, 2);
     line1.backgroundColor = UIColor.grayColor.CGColor;
     [self.layer addSublayer:line1];
 
-    CALayer *line2 = [CALayer alloc];
+    CALayer *line2 = [[CALayer alloc]init];
     line2.frame = CGRectMake(0, 0, 2, 210);
     line2.backgroundColor = UIColor.grayColor.CGColor;
     [self.layer addSublayer:line2];
     
-    CALayer *line3 = [CALayer alloc];
+    CALayer *line3 = [[CALayer alloc]init];
     line3.frame = CGRectMake(0, 210, 300, 2);
     line3.backgroundColor = UIColor.grayColor.CGColor;
     [self.layer addSublayer:line3];
     
-    CALayer *line4 = [CALayer alloc];
+    CALayer *line4 = [[CALayer alloc]init];
     line4.frame = CGRectMake(300, 0, 2, 210);
     line4.backgroundColor = UIColor.grayColor.CGColor;
     [self.layer addSublayer:line4];
@@ -41,7 +45,7 @@
 
 
         
-        CAShapeLayer *dashLayer = [CAShapeLayer alloc];
+        CAShapeLayer *dashLayer = [[CAShapeLayer alloc]init];
         dashLayer.strokeColor = UIColor.grayColor.CGColor;
         dashLayer.lineWidth = 1;
         [dashLayer setLineDashPattern:[NSArray arrayWithObjects:[NSNumber numberWithInt:7],[NSNumber numberWithInt:3],nil]];
@@ -70,7 +74,7 @@
         
         TimeLineViewModel *timeline = timelines[j];
         
-        CAShapeLayer *dashLayer = [CAShapeLayer alloc];
+        CAShapeLayer *dashLayer = [[CAShapeLayer alloc]init];
         dashLayer.strokeColor = UIColor.grayColor.CGColor;
         dashLayer.lineWidth = 1;
         [dashLayer setLineDashPattern:[NSArray arrayWithObjects:[NSNumber numberWithInt:7],[NSNumber numberWithInt:3],nil]];
@@ -85,7 +89,7 @@
         [[self layer] addSublayer:dashLayer];
         
         
-        CATextLayer *textlayer = [CATextLayer alloc];
+        CATextLayer *textlayer = [[CATextLayer alloc]init];
         textlayer.frame = CGRectMake((i * 75) - 18, 220, 100, 40);
         textlayer.frame = CGRectMake(timeline.textPosition.x,
                                      timeline.textPosition.y, 100, 40);
@@ -119,10 +123,10 @@
 }
 
 
-- (void)prepreTextLayer:(int)initialValue :(float)decimal{
+- (void)prepreTextLayer:(int)initial:(float)decimal{
     for (int i = 0;i<6;i++) {
         
-        CATextLayer *textlayer = [CATextLayer alloc];
+        CATextLayer *textlayer = [[CATextLayer alloc]init];
 
         textlayer.frame = CGRectMake(305, 22 + (i*30), 100, 40);
         textlayer.fontSize = 12;
@@ -151,14 +155,14 @@
 
 - (void)prepareCurrentLine:(int)value :(int)initialValue :(int)decimal{
     
-    CALayer *line = [CALayer alloc];
+    CALayer *line = [[CALayer alloc]init];
     line.backgroundColor = UIColor.orangeColor.CGColor;
 
     line.frame = CGRectMake(0, 210 - value, 300, 1);
     [[self layer] addSublayer:line];
 
     
-    CATextLayer *textlayer = [CATextLayer alloc];
+    CATextLayer *textlayer = [[CATextLayer alloc]init];
 
 
     textlayer.frame = CGRectMake(310, 210 - value, 100, 40);
@@ -176,11 +180,11 @@
 - (void)prepareCandles:(NSMutableArray *)candles {
     
     
-    for (int i = 0; candles.count;i++) {
+    for (int i = 0;i<candles.count;i++) {
         
       CandleViewModel *candle = candles[i];
     
-        CALayer *stick = [CALayer alloc];
+        CALayer *stick = [[CALayer alloc]init];
         
         if (candle.level == 0) {
             stick.backgroundColor = UIColor.redColor.CGColor;

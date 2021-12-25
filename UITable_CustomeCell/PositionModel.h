@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PositionModel.h"
 
 @interface PositionModel : NSObject
 
@@ -20,15 +21,3 @@
 @end
 
 
-@interface TimeLineViewModel : NSObject
-
-
-@property (nonatomic) PositionModel* startPosition;
-@property (nonatomic) PositionModel* endPosition;
-@property (nonatomic) PositionModel* textPosition;
-
-
--(instancetype)init:(PositionModel*)startPosition
-                   :(PositionModel*)endPosition
-                   :(PositionModel*)textPosition;
-@end

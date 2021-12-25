@@ -15,6 +15,8 @@
 		5A6BCC1327767D4E00E93DFA /* CandleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC1227767D4E00E93DFA /* CandleViewModel.m */; };
 		5A6BCC1627767E5400E93DFA /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC1527767E5400E93DFA /* PositionModel.m */; };
 		5A6BCC1D2776A21500E93DFA /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC1B2776A21500E93DFA /* ChartView.m */; };
+		5A6BCC202776EC7E00E93DFA /* TimeLineViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC1F2776EC7E00E93DFA /* TimeLineViewModel.m */; };
+		5A6BCC222776ECA000E93DFA /* TimeLineViewModel.h in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BCC212776ECA000E93DFA /* TimeLineViewModel.h */; };
 		626E26721EC7BB1E00EFE65C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 626E26711EC7BB1E00EFE65C /* main.m */; };
 		626E26751EC7BB1E00EFE65C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 626E26741EC7BB1E00EFE65C /* AppDelegate.m */; };
 		626E26781EC7BB1E00EFE65C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626E26771EC7BB1E00EFE65C /* ViewController.m */; };
@@ -40,6 +42,8 @@
 		5A6BCC1527767E5400E93DFA /* PositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
 		5A6BCC1B2776A21500E93DFA /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
 		5A6BCC1C2776A21500E93DFA /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		5A6BCC1F2776EC7E00E93DFA /* TimeLineViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewModel.m; sourceTree = "<group>"; };
+		5A6BCC212776ECA000E93DFA /* TimeLineViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeLineViewModel.h; sourceTree = "<group>"; };
 		626E266D1EC7BB1E00EFE65C /* UITable_CustomeCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITable_CustomeCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626E26711EC7BB1E00EFE65C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		626E26731EC7BB1E00EFE65C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		5A6BCC0C2776799E00E93DFA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5A6BCC1E2776EC5800E93DFA /* TimeLine ViewModel */,
 				5A6BCC1827769F8600E93DFA /* CandleViewModel */,
 				5A6BCC1727769F7500E93DFA /* ChartViewModel */,
 			);
@@ -167,6 +172,15 @@
 				5A6BCC1B2776A21500E93DFA /* ChartView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		5A6BCC1E2776EC5800E93DFA /* TimeLine ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BCC1F2776EC7E00E93DFA /* TimeLineViewModel.m */,
+				5A6BCC212776ECA000E93DFA /* TimeLineViewModel.h */,
+			);
+			name = "TimeLine ViewModel";
 			sourceTree = "<group>";
 		};
 		626E26641EC7BB1E00EFE65C = {
@@ -299,7 +313,9 @@
 				5A6AA377277605BA003C8AA4 /* HeaderViewCell.m in Sources */,
 				5A6AA37F27766AAD003C8AA4 /* ChartViewController.m in Sources */,
 				626E26781EC7BB1E00EFE65C /* ViewController.m in Sources */,
+				5A6BCC222776ECA000E93DFA /* TimeLineViewModel.h in Sources */,
 				626E26751EC7BB1E00EFE65C /* AppDelegate.m in Sources */,
+				5A6BCC202776EC7E00E93DFA /* TimeLineViewModel.m in Sources */,
 				626E26B71EC7C11F00EFE65C /* CustomCell.m in Sources */,
 				5A6BCC1627767E5400E93DFA /* PositionModel.m in Sources */,
 				626E26721EC7BB1E00EFE65C /* main.m in Sources */,

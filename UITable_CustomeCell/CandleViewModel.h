@@ -26,18 +26,18 @@
 @property (nonatomic) int level;
 
 
--(instancetype)initWithHLOC:(int *)highValue
-                           :(int *)lowValuee
-                           :(int *)openValue
-                           :(int *)closeValue;
+-(instancetype)initWithHLOC:(int)highValue
+                           :(int)lowValuee
+                           :(int)openValue
+                           :(int)closeValue;
 
--(instancetype)initWithHLOC:(int *)highValue
-                           :(int *)lowValuee
-                           :(int *)openValue
-                           :(int *)closeValue
-                           :(int *)heightValue
+-(instancetype)initWithHLOC:(int)highValue
+                           :(int)lowValuee
+                           :(int)openValue
+                           :(int)closeValue
+                           :(int)heightValue
                            :(PositionModel *)positionValue
-                           :(int *)levelValue;
+                           :(int)levelValue;
 
 //-(self)nextCandle:(NSInteger *)index;
 
