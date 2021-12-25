@@ -42,8 +42,6 @@
     
     for (int i = 1;i<7;i++) {
         
-
-
         
         CAShapeLayer *dashLayer = [[CAShapeLayer alloc]init];
         dashLayer.strokeColor = UIColor.grayColor.CGColor;
@@ -160,7 +158,6 @@
 
     line.frame = CGRectMake(0, 210 - value, 300, 1);
     [[self layer] addSublayer:line];
-
     
     CATextLayer *textlayer = [[CATextLayer alloc]init];
 

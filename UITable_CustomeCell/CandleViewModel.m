@@ -80,6 +80,8 @@
         newOpen = _close;
         if (self.randomBool){
             newLevel = 1; // high
+        } else {
+            newLevel = 0;
         }
         
         float keyDec = ((float)(random))/5;
@@ -98,20 +100,15 @@
         
         newHeight = _high - _low;
 
-        newPosition.x = (float)indexValue * 2; // 1.5
+        newPosition.x = (float)indexValue * 1.5; // 1.5
         newPosition.y = 210 - (float)newHigh;
         
-        NSLog(@"%.2f", newPosition.y);
-        NSLog(@"%.2f", _close);
-
         validation = NO;
-        if (newPosition.y > 5) { // new rule 15
+        if (newPosition.y > 15) { // new rule 15
             if (newPosition.y < 190) {
                 validation = YES;
             }
         }
-        
-
     }
     
     CandleViewModel *candleVM = [[CandleViewModel alloc]initWithHLOC:newHigh :newLow :newOpen :newClose :newHeight :newPosition :newLevel];

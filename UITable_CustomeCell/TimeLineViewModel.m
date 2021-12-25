@@ -10,5 +10,10 @@
 #import "TimeLineViewModel.h"
 
 @implementation TimeLineViewModel
-
+- (instancetype)init:(PositionModel *)startPositionValue :(PositionModel *)endPositionValue :(PositionModel *)textPositionValue{
+    _startPosition = startPositionValue;
+    _endPosition = endPositionValue;
+    _textPosition = textPositionValue;
+    return self;
+}
 @end

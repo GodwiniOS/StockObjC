@@ -44,6 +44,7 @@
 
         TimeLineViewModel *timeLine = [[TimeLineViewModel alloc] init:start :end :text];
         [_timeLines addObject:timeLine];
+        
     }
 
 }

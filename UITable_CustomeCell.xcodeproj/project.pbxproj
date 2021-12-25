@@ -44,6 +44,7 @@
 		5A6BCC1C2776A21500E93DFA /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
 		5A6BCC1F2776EC7E00E93DFA /* TimeLineViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewModel.m; sourceTree = "<group>"; };
 		5A6BCC212776ECA000E93DFA /* TimeLineViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeLineViewModel.h; sourceTree = "<group>"; };
+		5A6BCC232777056A00E93DFA /* UITable_CustomeCell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITable_CustomeCell-Bridging-Header.h"; sourceTree = "<group>"; };
 		626E266D1EC7BB1E00EFE65C /* UITable_CustomeCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITable_CustomeCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626E26711EC7BB1E00EFE65C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		626E26731EC7BB1E00EFE65C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 			children = (
 				5A6BCC1C2776A21500E93DFA /* ChartView.h */,
 				5A6BCC1B2776A21500E93DFA /* ChartView.m */,
+				5A6BCC232777056A00E93DFA /* UITable_CustomeCell-Bridging-Header.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +267,7 @@
 					626E266C1EC7BB1E00EFE65C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 33BKRBW8SH;
+						LastSwiftMigration = 1310;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -438,11 +441,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 33BKRBW8SH;
 				INFOPLIST_FILE = UITable_CustomeCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LOYD.UITable-CustomeCell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UITable_CustomeCell/UITable_CustomeCell-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -450,11 +457,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 33BKRBW8SH;
 				INFOPLIST_FILE = UITable_CustomeCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LOYD.UITable-CustomeCell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UITable_CustomeCell/UITable_CustomeCell-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

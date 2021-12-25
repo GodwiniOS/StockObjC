@@ -23,80 +23,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A54D2FC6-02EE-49E3-894E-0E24831EEBE5"
-            shouldBeEnabled = "Yes"
+            uuid = "F9E5EC82-BDBA-4439-8882-CCF6A0691079"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UITable_CustomeCell/ChartViewController.m"
+            filePath = "UITable_CustomeCell/CandleViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-eventToFire:"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-nextCandle:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2D688165-C4A4-4D2D-AAA8-DE391F3A0AB3"
-            shouldBeEnabled = "Yes"
+            uuid = "78882EC9-1A76-4108-B459-6DFAB8F9127D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UITable_CustomeCell/ChartViewModel.m"
+            filePath = "UITable_CustomeCell/CandleViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-initialValuesGenerator"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-nextCandle:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FF1240D1-C71F-4C5E-BEA1-03CE61D1BD63"
-            shouldBeEnabled = "Yes"
+            uuid = "B03E6436-BDDB-4D85-967E-2055DE965550"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UITable_CustomeCell/ChartViewModel.m"
+            filePath = "UITable_CustomeCell/CandleViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-initialValuesGenerator"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "05DFABF9-865B-49B9-B46A-8BB01D87FC4B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITable_CustomeCell/ChartViewModel.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-initialValuesGenerator"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9C951BB5-5A7C-4D97-A7B7-167162703F78"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITable_CustomeCell/ChartViewModel.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-initialValuesGenerator"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-nextCandle:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

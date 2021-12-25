@@ -50,7 +50,6 @@
 - (void)eventToFire:(NSTimer*)timer {
     
     for (CALayer *layer in _chartView.layer.sublayers) {
-        
         if (layer != nil){
             continue;;
         }

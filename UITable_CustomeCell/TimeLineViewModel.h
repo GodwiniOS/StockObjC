@@ -17,7 +17,7 @@
 @property (nonatomic) PositionModel* textPosition;
 
 
--(instancetype)init:(PositionModel*)startPosition
-                   :(PositionModel*)endPosition
-                   :(PositionModel*)textPosition;
+-(instancetype)init:(PositionModel*)startPositionValue
+                   :(PositionModel*)endPositionValue
+                   :(PositionModel*)textPositionValue;
 @end
